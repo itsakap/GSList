@@ -1,5 +1,10 @@
 var foods = ["apple", "banana", "coconut", "donuts", "eggs", "franks", "grapes"];
+var nameValue = document.getElementById('name').value;
+var priceValue = document.getElementById('price').value;
+var categoryValue = document.getElementById('category').value;
+function Grocery(){
 
+}
 
 
 function addItem(){
@@ -12,19 +17,22 @@ function addItem(){
 }
 
 function itemHasName(){
-	var nameValue = document.getElementById('name').value;
+	
 	return nameValue != "";
 }
 function itemHasPrice(){
-	var priceValue = document.getElementById('price').value;
+
 	return priceValue!="";
 }
 function itemHasCategory(){
-	var categoryValue = document.getElementById('category').value;
+	
 	return categoryValue!="";
 }
 function addToList(){
-	console.log('added');
+	var template = document.createElement('ul');
+	
+
+
 }
 
 // When submit button is clicked, verify that the item has a name, a price, and a category. If so, add to list.

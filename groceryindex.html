@@ -2,15 +2,41 @@
 <html>
 <head>
 	<title>Grocery List</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
 	<h1>Grocery List</h1>
 
-	<table>
-		<th>Name</th><th>Price</th><th>Organic</th><th>Category</th><th>Quantity</th>
-		<tr><td>apple</td></tr>
-		<tr><td>banana</td></tr>
-	</table>
+	<div id="groceries">
+		<ul>
+			<!-- begin "table headers" -->
+			<li>
+				<span class = "checkbox">Completed</span>
+				<span class = "category">Category</span>
+				<span class = "grocery">Grocery Name</span>
+				<span class = "organic">Organic?</span>
+				<span class = "price-per">Unit Price</span>
+				<span class = "quantity"> Quantity</span>
+				<span class = "total">Total</span>
+			</li>
+			<!-- end "table headers" -->
+
+
+			<!-- begin sample grocery item (get it? item? List item?) -->
+			<li>
+				<span class = "heckbox"><input type="checkbox"></span>
+				<span class = "category">Fruit</span>
+				<span class = "grocery">Apple</span>
+				<span class = "organic">Yes</span>
+				<span class = "price-per">$4.99</span>
+				<span class = "quantity"> 3</span>
+				<span class = "total">$14.97</span>
+			</li>
+			<!-- end sample grocery item -->
+
+
+		</ul>
+	</div>
 
 	<div id="inputs">
 		Name: <input type="text" id="name">
