@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grocery List</title>
+</head>
+<body>
+	<h1>Grocery List</h1>
+
+	<table>
+		<th>Name</th><th>Price</th><th>Organic</th><th>Category</th><th>Quantity</th>
+		<tr><td>apple</td></tr>
+		<tr><td>banana</td></tr>
+	</table>
+
+	<div id="inputs">
+		Name: <input type="text" id="name">
+		Price: <input type="number" id="price">
+		Organic? If yes, check box: <input type="checkbox" id="organic">
+		Category: <select id="category">
+			<option value="">Select Category</option>
+			<option value="fruit">Fruit</option>
+			<option value="vegetable">Vegetable</option>
+			<option value="dairy">Dairy</option>
+			<option value="meat">Meat</option>
+		</select>
+		<div id="submit" onclick = "addItem()">Submit</div>
+	</div>
+	<script type="text/javascript" src="grocerylist.js"></script>
+</body>
+</html>
