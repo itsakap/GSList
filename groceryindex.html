@@ -3,29 +3,35 @@
 <head>
 	<title>Grocery List</title>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
-	<link href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<h1>Grocery List</h1>
+	<h1>GROCERY LIST</h1>
 
-	<form id="inputs">
-		Name: <input type="text" id="name">
-		Price: <input type="number" id="price">
-		Organic? If yes, check box: <input type="checkbox" id="organic">
-		Category: <select id="category">
-			<option value="">Select Category</option>
-			<option value="fruit">Fruit</option>
-			<option value="vegetable">Vegetable</option>
-			<option value="dairy">Dairy</option>
-			<option value="meat">Meat</option>
-		</select>
-		<input id="submit" type = "submit" onclick = "addItem()"></div>
-	</form>
+	<div id="addItem">
+		<h2>ADD ITEM TO LIST</h2>
+		<form id="inputs">
+			Name: <input type="text" id="name">
+			Price: <input type="number" id="price">
+			Organic? If yes, check box: <input type="checkbox" id="organic">
+			Category: <select id="category">
+				<option value="">Select Category</option>
+				<option value="fruit">Fruit</option>
+				<option value="vegetable">Vegetable</option>
+				<option value="dairy">Dairy</option>
+				<option value="meat">Meat</option>
+			</select>
+		</br></br></br>
+			<input id="submit" type = "submit" onclick = "addItem()"></div>
+		</form>
+	</div>
+
 
 	<div id="groceries">
+	<h2>GROCERIES</h2>
 		<ul>
 			<!-- begin "table headers" -->
-			<li>
+			<li class="tableHeaders">
 				<span class = "checkbox">Completed</span>
 				<span class = "category">Category</span>
 				<span class = "grocery">Grocery Name</span>
@@ -35,9 +41,6 @@
 				<span class = "total">Total</span>
 			</li>
 			<!-- end "table headers" -->
-
-
-
 
 			<!-- begin sample grocery item (get it? item? List item?) -->
 			<li>
@@ -50,8 +53,6 @@
 				<span class = "total">$14.97</span>
 			</li>
 			<!-- end sample grocery item -->
-
-
 		</ul>
 	</div>
 
