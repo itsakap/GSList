@@ -11,17 +11,20 @@
 	<div id="addItem">
 		<h2>ADD ITEM TO LIST</h2>
 		<form id="inputs">
-			Name: <input type="text" id="name">
-			Price: <input type="number" id="price">
-			Organic? If yes, check box: <input type="checkbox" id="organic">
-			Category: <select id="category">
-				<option value="">Select Category</option>
-				<option value="fruit">Fruit</option>
-				<option value="vegetable">Vegetable</option>
-				<option value="dairy">Dairy</option>
-				<option value="meat">Meat</option>
-			</select>
-		</br></br></br>
+			<div class="inputContainer">
+				Name: <input type="text" id="name">
+				<br>Category: <select id="category">
+					<option value="">Select Category</option>
+					<option value="fruit">Fruit</option>
+					<option value="vegetable">Vegetable</option>
+					<option value="dairy">Dairy</option>
+					<option value="meat">Meat</option>
+				</select>
+			</div>
+			<div class="inputContainer">Organic? If yes, check box: <input type="checkbox" id="organic">
+				<br>Price: <input type="number" id="price">
+			</div>
+		</br>
 			<input id="submit" type = "submit" onclick = "addItem()"></div>
 		</form>
 	</div>
