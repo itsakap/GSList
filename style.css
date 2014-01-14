@@ -1,3 +1,13 @@
+body {
+    margin: 0px;
+    padding: 15px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Oleo Script', cursive;
+}
+
 ul {
 <<<<<<< HEAD
 	margin:0;
