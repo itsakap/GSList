@@ -1,4 +1,5 @@
 ul {
+<<<<<<< HEAD
 	margin:0;
     padding:0;
     list-style:none;
@@ -11,6 +12,16 @@ span{
     width:100px;
     display:inline-block;
 }
+=======
+	list-style: none;
+
+}
+
+li {
+	float: left;
+}
+
+>>>>>>> 391d3f3695a83b60be275657b1bc7f5384dc3381
 .clearfix:after {
     content: ".";
     display: block;
