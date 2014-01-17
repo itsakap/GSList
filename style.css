@@ -1,3 +1,8 @@
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
 body {
     margin: 0px;
     padding: 15px;
@@ -23,7 +28,7 @@ h2 {
     position: relative;
     margin: auto;
     width: 850px;
-    height: 250px;
+    height: 400px;
     background-color: rgba(0, 0, 0, 0.4);
     padding: 30px;
     box-shadow: 0 0 10px #888;
@@ -74,7 +79,7 @@ h2 {
 }
 
 ul {
-<<<<<<< HEAD
+
 	margin:0;
     padding:0;
     list-style:none;

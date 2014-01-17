@@ -1,35 +1,16 @@
-var foods = ["apple", "banana", "coconut", "donuts", "eggs", "franks", "grapes"];
-var nameValue = document.getElementById('name').value;
-var priceValue = document.getElementById('price').value;
-var categoryValue = document.getElementById('category').value;
-function Grocery(){
-
-}
-
-
-function addItem(){
-	if(itemHasName() && itemHasPrice() && itemHasCategory()){
-		addToList();	
-	}
-	else {
-		alert('incomplete!!!');
-	}
-}
-
-function itemHasName(){
-	
-	return nameValue != "";
-}
-function itemHasPrice(){
-
-	return priceValue!="";
-}
-function itemHasCategory(){
-	
-	return categoryValue!="";
+function GroceryCtrl($scope){
+	$scope.groceries = [];
+	$scope.addItem = function(){
+		if($scope.name != "" && $scope.price >= 0 && $scope.category != "")
+	$scope.groceries.push({name: $scope.name, category: $scope.category, organic: $scope.organic, price: $scope.price});
+	$scope.name = "";
+	$scope.category = "";
+	$scope.organic = false;
+	$scope.price = 0;
+	};
 }
 function addToList(){
-	var template = document.createElement('ul');
+	
 	
 
 

@@ -4,28 +4,33 @@
 	<title>Grocery List</title>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<script src = "angular.min.js"></script>
 </head>
-<body>
+<body x-ng-app="" x-ng-controller ="GroceryCtrl">
 	<h1>GROCERY LIST</h1>
-
 	<div id="addItem">
 		<h2>ADD ITEM TO LIST</h2>
-		<form id="inputs">
+		<form id="inputs" x-ng-submit = "addItem()">
 			<div class="inputContainer">
-				Name: <input type="text" id="name">
-				<br>Category: <select id="category">
+				Name:
+				<input type="text" id="name" x-ng-model = "name">
+				Category:
+				<select id="category"x-ng-model = "category">
 					<option value="">Select Category</option>
-					<option value="fruit">Fruit</option>
-					<option value="vegetable">Vegetable</option>
-					<option value="dairy">Dairy</option>
-					<option value="meat">Meat</option>
+					<option value="Fruit">Fruit</option>
+					<option value="Vegetable">Vegetable</option>
+					<option value="Dairy">Dairy</option>
+					<option value="Meat">Meat</option>
+					<option value = "Junk Food">Junk Food</option>
 				</select>
 			</div>
-			<div class="inputContainer">Organic? If yes, check box: <input type="checkbox" id="organic">
-				<br>Price: <input type="number" id="price">
+			<div class="inputContainer">
+				Organic? If yes, check box:
+				<input type="checkbox" id="organic" x-ng-model = "organic"/>
+				Price: <input type="number" id="price" x-ng-model = "price" step = "0.01"min = "0">{{price | currency}}</input>
 			</div>
 		</br>
-			<input id="submit" type = "submit" onclick = "addItem()"></div>
+			<input id="submit" type = "submit" /></div>
 		</form>
 	</div>
 
@@ -45,8 +50,20 @@
 			</li>
 			<!-- end "table headers" -->
 
+			<!-- begin grocery list populator!!! -->
+			<li x-ng-repeat = "grocery in groceries track by $index">
+				<span class = "checkbox"></span>
+				<span class = "category">{{grocery.category}}</span>
+				<span class = "grocery">{{grocery.name}}</span>
+				<span class = "organic">{{grocery.organic ? 'yes' : 'no'}}</span>
+				<span class = "price-per">{{grocery.price | currency}}</span>
+				<span class = "quantity"></span>
+				<span class = "total"></span>
+			</li>
+			<!-- end grocery list populator!!! -->
+
 			<!-- begin sample grocery item (get it? item? List item?) -->
-			<li>
+<!-- 			<li>
 				<span class = "checkbox"><input type="checkbox"></span>
 				<span class = "category">Fruit</span>
 				<span class = "grocery">Apple</span>
@@ -54,8 +71,9 @@
 				<span class = "price-per">$4.99</span>
 				<span class = "quantity"> 3</span>
 				<span class = "total">$14.97</span>
-			</li>
+			</li> -->
 			<!-- end sample grocery item -->
+
 		</ul>
 	</div>
 
